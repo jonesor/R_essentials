@@ -1,0 +1,79 @@
+# Importing and checking data
+
+::: {.callout-note}
+## Video
+Coming soon.
+:::
+
+**In this chapter:** read a CSV file into R, check it, and fix the most common import problems.
+
+## Read the file
+
+Data for R are best kept as **CSV** files (comma-separated values). In Excel: File > Save As > CSV.
+
+```{r}
+morph <- read.csv("data/morphometry.csv")
+```
+
+`morph` is a **data frame**: a table with one column per variable and one row per observation.
+
+## Check it, every time
+
+Always look at your data straight after importing it.
+
+```{r}
+head(morph)
+str(morph)
+summary(morph)
+```
+
+`str()` is the most useful. It shows the number of rows, the column names, and each column's type: `chr` for text, `int` or `num` for numbers. Ask yourself: is each column the type I expect?
+
+Pick out one column with `$`:
+
+```{r}
+mean(morph$Height)
+```
+
+## Common problems and their fixes
+
+| What you see | Likely cause | Fix |
+|---|---|---|
+| `cannot open file ... No such file or directory` | R is looking in the wrong folder, or the name is misspelt | Open your project; check the name and the `data/` part |
+| One column only, or `duplicate 'row.names' are not allowed` | File uses `;` between values (Danish or German Excel) | Use `read.csv2()` |
+| A number column shows as `chr` | A typo or a decimal comma somewhere in it | Find the bad value, fix it in the file, import again |
+| A category appears twice, e.g. `Drug` and `Drug ` | Stray spaces | Add `strip.white = TRUE` |
+
+Here is a file with all of these problems:
+
+```{r}
+#| error: true
+chol <- read.csv("data/cholesterol_messy.csv")
+```
+
+The error is confusing, but the cause is simple: the values are separated by `;`, not `,`. Use `read.csv2()`:
+
+```{r}
+chol <- read.csv2("data/cholesterol_messy.csv")
+str(chol)
+table(chol$Treatment)
+```
+
+Two more problems. `Cholesterol` is text (`chr`), not a number, and there are two kinds of "Drug". Fix the spaces first:
+
+```{r}
+chol <- read.csv2("data/cholesterol_messy.csv", strip.white = TRUE)
+table(chol$Treatment)
+```
+
+To find out why `Cholesterol` is text, print it and look:
+
+```{r}
+chol$Cholesterol
+```
+
+One value is `19O,5`: a letter O instead of a zero. The best fix is to correct it in the file itself, so the error is gone for good.
+
+## Your turn
+
+Open `cholesterol_messy.csv` in a text editor (not Excel), change `19O` to `190`, and save it. Import it again with `read.csv2()` and `strip.white = TRUE`. Check with `str()` that `Cholesterol` is now `num`.

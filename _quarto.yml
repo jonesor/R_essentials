@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "R Essentials"
+  subtitle: "The bare minimum to get going with R"
+  author: "Owen Jones"
+  date: today
+  date-format: "D MMMM YYYY"
+  repo-url: https://github.com/jonesor/R_essentials
+  repo-actions: [issue]
+  chapters:
+    - index.qmd
+    - 01-setup.qmd
+    - 02-basics.qmd
+    - 03-import.qmd
+    - 04-data.qmd
+    - 05-plots.qmd
+    - 06-ttest.qmd
+    - 07-regression.qmd
+
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    toc: true
+
+execute:
+  echo: true
+  warning: false
+  message: false
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    fig.width: 5
+    fig.height: 4

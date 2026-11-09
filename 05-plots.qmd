@@ -1,0 +1,49 @@
+# Simple plots
+
+::: {.callout-note}
+## Video
+Coming soon.
+:::
+
+**In this chapter:** a histogram, a box plot and a scatter plot, with proper axis labels.
+
+```{r}
+morph <- read.csv("data/morphometry.csv")
+morph$Height <- morph$Height / 10
+morph$HandLength <- morph$HandLength / 10
+```
+
+Plot your data before you analyse it. Plots show patterns, and mistakes, that numbers hide.
+
+## One variable: histogram
+
+```{r}
+hist(morph$Height, xlab = "Height (cm)", main = "")
+```
+
+`xlab` sets the axis label. `main = ""` removes the title, which a figure caption usually replaces.
+
+## A number by group: box plot
+
+```{r}
+boxplot(Height ~ Sex, data = morph, ylab = "Height (cm)")
+```
+
+The `~` (tilde) means "explained by": height explained by sex. The thick line is the median, the box holds the middle half of the data.
+
+## Two numbers: scatter plot
+
+```{r}
+plot(Height ~ HandLength, data = morph,
+     xlab = "Hand length (cm)", ylab = "Height (cm)")
+```
+
+The same `y ~ x` formula appears again in the next two chapters. Learn it once and it carries through.
+
+## Save a plot
+
+In the Plots pane: Export > Save as Image.
+
+## Your turn
+
+Using `chirps.csv`, make a scatter plot of temperature against chirps per second, with clear axis labels and units. Which variable should go on the x-axis?

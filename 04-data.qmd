@@ -1,0 +1,62 @@
+# Just enough data handling
+
+::: {.callout-note}
+## Video
+Coming soon.
+:::
+
+**In this chapter:** make a new column, pick out some rows, and summarise by group.
+
+```{r}
+morph <- read.csv("data/morphometry.csv")
+```
+
+## Change or add a column
+
+Heights and lengths are in millimetres. Convert them to centimetres by dividing by 10:
+
+```{r}
+morph$Height <- morph$Height / 10
+morph$HandLength <- morph$HandLength / 10
+head(morph)
+```
+
+Assigning to an existing column (`morph$Height <-`) replaces it. Assigning to a new name adds a column.
+
+## Pick out rows
+
+`subset()` keeps the rows that meet a condition. Note the double equals sign `==`, which means "is equal to".
+
+```{r}
+females <- subset(morph, Sex == "Female")
+nrow(females)
+```
+
+Other conditions: `>`, `<`, `>=`, `<=` and `!=` (is not equal to).
+
+```{r}
+tall <- subset(morph, Height > 180)
+nrow(tall)
+```
+
+## Summarise
+
+```{r}
+mean(morph$Height)
+sd(morph$Height)
+```
+
+## Summarise by group
+
+`tapply()` applies a function to a column, separately for each group:
+
+```{r}
+tapply(morph$Height, morph$Sex, mean)
+tapply(morph$Height, morph$Sex, sd)
+```
+
+Read it as: take `Height`, split it by `Sex`, and give the `mean` of each part.
+
+## Your turn
+
+Import `chirps.csv`. Make a new column `tempC` with the temperature in °C, using `(temperature - 32) / 1.8`. How many rows have more than 17 chirps per second? What is the mean `tempC` for those rows?

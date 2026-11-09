@@ -1,0 +1,69 @@
+# R basics
+
+::: {.callout-note}
+## Video
+Coming soon.
+:::
+
+**In this chapter:** scripts, comments, objects, functions and vectors.
+
+## Use a script
+
+Code typed in the Console is gone when you close RStudio. Code in a script is saved.
+
+File > New File > R Script. Save it in your project as `practice.R`. Run a line by putting the cursor on it and pressing **Ctrl+Enter** (Windows) or **Cmd+Enter** (Mac).
+
+## Comments
+
+Anything after `#` is ignored by R. Use comments to say what your code does.
+
+```{r}
+# R can be used as a calculator
+2 + 3
+```
+
+## Objects
+
+Store a value with `<-` and give it a name. Typing the name shows the value.
+
+```{r}
+height <- 172
+height
+```
+
+Names are case-sensitive: `Height` and `height` are different objects.
+
+## Functions
+
+A function does a job. You give it **arguments** inside brackets, separated by commas.
+
+```{r}
+round(3.14159, digits = 2)
+```
+
+Here `round` is the function, and `3.14159` and `digits = 2` are its arguments. To see a function's arguments, open its help page:
+
+```{r}
+#| eval: false
+?round
+```
+
+## Vectors
+
+A vector is a set of values. Make one with `c()` (short for combine).
+
+```{r}
+heights <- c(165, 172, 180, 158)
+mean(heights)
+length(heights)
+```
+
+Most functions work on the whole vector at once:
+
+```{r}
+heights / 100
+```
+
+## Your turn
+
+Make a vector of the ages of five people you know. Use `mean()`, `min()` and `max()` on it. Add a comment above each line saying what it does.

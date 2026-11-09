@@ -1,0 +1,24 @@
+# Welcome {.unnumbered}
+
+This is a very short introduction to R. It covers only what you need to import a data set, look at it, make a simple plot, and run a t-test and a simple regression.
+
+Use it as a first introduction or as a refresher. There are seven chapters, each about 10 to 15 minutes long, and each has a matching short video.
+
+**What it leaves out on purpose:** packages such as the tidyverse, the pipe, and anything beyond a t-test and a simple regression. Everything here uses base R, which is the R you get when you install it.
+
+## How to use it
+
+Type the code yourself rather than copying it. Making (and fixing) your own typing mistakes is part of learning R.
+
+Each chapter ends with a short **Your turn** exercise.
+
+## The data
+
+Download these files and put them in a folder called `data` (Chapter 1 explains where):
+
+- [`morphometry.csv`](https://raw.githubusercontent.com/jonesor/R_essentials/main/data/morphometry.csv): height, hand length and foot length (mm) of 155 students, by sex. Used throughout.
+- [`cholesterol.csv`](https://raw.githubusercontent.com/jonesor/R_essentials/main/data/cholesterol.csv): cholesterol in a control and a drug group.
+- [`cholesterol_messy.csv`](https://raw.githubusercontent.com/jonesor/R_essentials/main/data/cholesterol_messy.csv): the same kind of data, with problems to fix.
+- [`chirps.csv`](https://raw.githubusercontent.com/jonesor/R_essentials/main/data/chirps.csv): cricket chirps per second and air temperature (°F).
+
+To download a file, open the link, then save the page (File > Save As) with the same name.
