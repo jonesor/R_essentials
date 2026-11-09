@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** make a new column, pick out some rows, and summarise by group.
+:::
 
 Data rarely arrive in exactly the form you need. These few tools cover most simple jobs.
 

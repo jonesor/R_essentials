@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** a histogram, a box plot and a scatter plot, with proper axis labels.
+:::
 
 ```{r}
 morph <- read.csv("data/morphometry.csv")

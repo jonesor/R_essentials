@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+$primary: #185FA5;
+$link-color: #185FA5;
+$navbar-bg: #0C447C;
+$navbar-fg: #E6F1FB;
+$font-family-sans-serif: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-monospace: Menlo, Consolas, "Liberation Mono", monospace;
+$headings-color: #185FA5;
+$headings-font-weight: 500;
+$callout-color-note: #185FA5;
+$callout-color-tip: #185FA5;
+
+/*-- scss:rules --*/
+.chapter-intro {
+  border-left: 4px solid $primary;
+  background: #E6F1FB;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0 1.5rem;
+}
+.chapter-intro p { margin: 0; }
+.quarto-title-block .title { font-weight: 600; }

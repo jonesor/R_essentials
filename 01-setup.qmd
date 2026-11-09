@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** install R and RStudio, make a project folder, and see where R looks for files.
+:::
 
 You only do this once. A tidy setup now saves a lot of frustration later.
 

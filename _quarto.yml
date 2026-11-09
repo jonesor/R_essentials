@@ -10,6 +10,17 @@ book:
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/jonesor/R_essentials
   repo-actions: [issue]
+  cover-image: cover.png
+  cover-image-alt: "Scatter plot of height against hand length with a fitted line"
+  favicon: favicon.svg
+  navbar:
+    background: primary
+    search: true
+  sidebar:
+    style: docked
+  page-footer:
+    left: "Owen Jones · Population Biology Group, SDU"
+    right: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
   chapters:
     - index.qmd
     - 01-setup.qmd
@@ -22,7 +33,9 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, custom.scss]
+      dark: [darkly, custom-dark.scss]
     code-copy: true
     toc: true
 

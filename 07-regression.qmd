@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** fit a straight line and understand its intercept and slope.
+:::
 
 Regression describes how one number changes with another, using a straight line. Put the variable you think does the explaining on the x-axis.
 

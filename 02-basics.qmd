@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** scripts, comments, objects, functions and vectors.
+:::
 
 These are the building blocks for everything else in the book.
 

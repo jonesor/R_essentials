@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** read a CSV file into R, check it, and fix the most common import problems.
+:::
 
 Most problems in an analysis start at import. A few minutes checking here saves hours later.
 

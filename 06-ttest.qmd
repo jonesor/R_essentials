@@ -5,7 +5,9 @@
 Coming soon.
 :::
 
+::: {.chapter-intro}
 **In this chapter:** compare the means of two groups and read the output.
+:::
 
 A t-test asks whether the difference between two group means is larger than you would expect by chance. It is one of the most common tests in biology.
 
