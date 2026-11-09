@@ -84,11 +84,11 @@ Using `chirps.csv`, fit `temperature ~ chirps`. What do the slope and the interc
 ## Model answer
 
 ```r
-chirps <- read.csv("data/chirps.csv")
-mod <- lm(temperature ~ chirps, data = chirps)
+crickets <- read.csv("data/chirps.csv")
+mod <- lm(temperature ~ chirps, data = crickets)
 coef(mod)
 22.8 + 3.41 * 16
-plot(temperature ~ chirps, data = chirps,
+plot(temperature ~ chirps, data = crickets,
      xlab = "Chirps per second", ylab = "Temperature (°F)")
 abline(mod)
 ```

@@ -63,8 +63,8 @@ Using `chirps.csv`, make a scatter plot of temperature against chirps per second
 ## Model answer
 
 ```r
-chirps <- read.csv("data/chirps.csv")
-plot(temperature ~ chirps, data = chirps,
+crickets <- read.csv("data/chirps.csv")
+plot(temperature ~ chirps, data = crickets,
      xlab = "Chirps per second", ylab = "Temperature (°F)")
 ```
 

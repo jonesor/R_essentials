@@ -76,9 +76,9 @@ Import `chirps.csv`. Make a new column `tempC` with the temperature in °C, usin
 ## Model answer
 
 ```r
-chirps <- read.csv("data/chirps.csv")
-chirps$tempC <- (chirps$temperature - 32) / 1.8
-fast <- subset(chirps, chirps > 17)
+crickets <- read.csv("data/chirps.csv")
+crickets$tempC <- (crickets$temperature - 32) / 1.8
+fast <- subset(crickets, chirps > 17)
 nrow(fast)
 mean(fast$tempC)
 ```
