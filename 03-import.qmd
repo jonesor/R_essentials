@@ -90,3 +90,14 @@ One value is `19O,5`: a letter O instead of a zero. The best fix is to correct i
 ## Your turn
 
 Open `cholesterol_messy.csv` in a text editor (not Excel), change `19O` to `190`, and save it. Import it again with `read.csv2()` and `strip.white = TRUE`. Check with `str()` that `Cholesterol` is now `num`.
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+```r
+chol <- read.csv2("data/cholesterol_messy.csv", strip.white = TRUE)
+str(chol)
+```
+
+`str()` should now show `Cholesterol` as `num`, and `table(chol$Treatment)` should show only `Control` and `Drug`.
+:::

@@ -22,10 +22,10 @@ R is the language. RStudio is the program you use to write and run R.
 An RStudio Project is a folder that holds everything for one piece of work. When you open the project, R looks for files in that folder. This avoids most "file not found" errors.
 
 1. File > New Project > New Directory > New Project.
-2. Call it `R_essentials` and choose where to put it. Avoid cloud-synced folders such as OneDrive or iCloud.
+2. Call it `R_practice` and choose where to put it. Avoid cloud-synced folders such as OneDrive or iCloud.
 3. In the new folder, make a folder called `data` and put the data files in it (see [The data](index.qmd#the-data)).
 
-Next time, open the project by double-clicking `R_essentials.Rproj`.
+Next time, open the project by double-clicking `R_practice.Rproj`.
 
 ## Where is R looking?
 
@@ -36,9 +36,9 @@ R reads files relative to its **working directory**. In a project, that is the p
 getwd()
 ```
 
-You should see the path to your `R_essentials` folder. A file in its `data` folder is then simply `"data/morphometry.csv"`.
+You should see the path to your `R_practice` folder. A file in its `data` folder is then simply `"data/morphometry.csv"`.
 
-If `getwd()` shows a different folder, you probably opened RStudio on its own rather than the project. Close RStudio and double-click `R_essentials.Rproj`.
+If `getwd()` shows a different folder, you probably opened RStudio on its own rather than the project. Close RStudio and double-click `R_practice.Rproj`.
 
 ## Functions in this chapter
 
@@ -46,4 +46,16 @@ If `getwd()` shows a different folder, you probably opened RStudio on its own ra
 
 ## Your turn
 
-Make the project and the `data` folder, download the four data files, and run `getwd()`. Check that the path ends in `R_essentials`.
+Make the project and the `data` folder, download the four data files, and run `getwd()`. Check that the path ends in `R_practice`.
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+Run in the Console:
+
+```r
+getwd()
+```
+
+The last part of the path should be `R_practice`, for example `/Users/you/Documents/R_practice`. If not, open the project by double-clicking `R_practice.Rproj`.
+:::

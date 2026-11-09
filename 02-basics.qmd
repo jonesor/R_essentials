@@ -88,3 +88,20 @@ heights / 100
 ## Your turn
 
 Make a vector of the ages of five people you know. Use `mean()`, `min()` and `max()` on it. Add a comment above each line saying what it does.
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+Your numbers will differ. For example:
+
+```r
+# ages of five people
+ages <- c(23, 45, 31, 67, 19)
+# mean age
+mean(ages)
+# youngest
+min(ages)
+# oldest
+max(ages)
+```
+:::

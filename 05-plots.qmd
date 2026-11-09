@@ -58,3 +58,15 @@ In the Plots pane: Export > Save as Image.
 ## Your turn
 
 Using `chirps.csv`, make a scatter plot of temperature against chirps per second, with clear axis labels and units. Which variable should go on the x-axis?
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+```r
+chirps <- read.csv("data/chirps.csv")
+plot(temperature ~ chirps, data = chirps,
+     xlab = "Chirps per second", ylab = "Temperature (°F)")
+```
+
+Chirps go on the x-axis because we use the chirp rate to predict the temperature. Warmer air goes with faster chirping.
+:::

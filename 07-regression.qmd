@@ -79,3 +79,23 @@ The `HandLength` row gives the 95% confidence interval for the slope: 5.5 to 6.7
 ## Your turn
 
 Using `chirps.csv`, fit `temperature ~ chirps`. What do the slope and the intercept mean here? Predict the temperature when a cricket chirps 16 times per second, and draw the line on your scatter plot.
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+```r
+chirps <- read.csv("data/chirps.csv")
+mod <- lm(temperature ~ chirps, data = chirps)
+coef(mod)
+22.8 + 3.41 * 16
+plot(temperature ~ chirps, data = chirps,
+     xlab = "Chirps per second", ylab = "Temperature (°F)")
+abline(mod)
+```
+
+**Temperature = 22.8 + 3.41 × chirps**
+
+- **Slope:** each extra chirp per second goes with a temperature about 3.41 °F higher.
+- **Intercept:** the predicted temperature when a cricket does not chirp at all. This lies far outside the data, so it has no real meaning.
+- **Prediction:** at 16 chirps per second, about 77.4 °F.
+:::

@@ -71,3 +71,17 @@ Read it as: take `Height`, split it by `Sex`, and give the `mean` of each part. 
 ## Your turn
 
 Import `chirps.csv`. Make a new column `tempC` with the temperature in °C, using `(temperature - 32) / 1.8`. How many rows have more than 17 chirps per second? What is the mean `tempC` for those rows?
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+```r
+chirps <- read.csv("data/chirps.csv")
+chirps$tempC <- (chirps$temperature - 32) / 1.8
+fast <- subset(chirps, chirps > 17)
+nrow(fast)
+mean(fast$tempC)
+```
+
+Five rows have more than 17 chirps per second. Their mean temperature is 29.9 °C.
+:::

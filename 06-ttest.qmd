@@ -52,3 +52,17 @@ Write it up with the estimate first:
 ## Your turn
 
 Using `cholesterol.csv`, test whether cholesterol differs between the control and drug groups. Plot it first. How big is the difference, what is its confidence interval, and what would you conclude?
+
+::: {.callout-tip collapse="true"}
+## Model answer
+
+```r
+chol <- read.csv("data/cholesterol.csv")
+boxplot(Cholesterol ~ Treatment, data = chol, ylab = "Cholesterol")
+t.test(Cholesterol ~ Treatment, data = chol)
+```
+
+Mean cholesterol was 205.7 in the control group and 185.5 in the drug group, a difference of 20.2. The 95% confidence interval is -1.8 to 42.2, which includes zero (p = 0.068).
+
+The drug may lower cholesterol by about 20, but with only six people per group the data are also consistent with no effect, or even a small increase. A larger study is needed.
+:::
