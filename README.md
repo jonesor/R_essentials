@@ -20,7 +20,7 @@ The book is built and deployed to GitHub Pages by `.github/workflows/publish.yml
 
 ## Videos
 
-One video per chapter, 5 to 8 minutes, following the chapter text and typing the code live. Add the link in the "Video" box at the top of each chapter.
+One video per chapter, 5 to 8 minutes, following the chapter text and typing the code live. Add the link in the "Video" box at the top of each chapter. Outlines for each video are in `_video-scripts/` (not rendered into the book).
 
 ## Rules for writing
 
