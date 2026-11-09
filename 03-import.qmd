@@ -19,6 +19,17 @@ morph <- read.csv("data/morphometry.csv")
 
 `morph` is a **data frame**: a table with one column per variable and one row per observation.
 
+## Or use the Import Dataset menu
+
+RStudio can write the import code for you. In the Environment pane, choose **Import Dataset > From Text (base)** and pick the file. The preview shows the data as R will read it. If it looks wrong, change the separator or decimal mark until it looks right.
+
+RStudio then runs the code in the Console. Two things to do afterwards:
+
+- Copy the line starting `read.csv` into your script, so you can run it again next time.
+- Shorten the file path to `"data/..."`. RStudio writes the full path, which stops working if you move the folder or share the script.
+
+Avoid **From Text (readr)** and **From Excel**: they use packages that this book does not cover.
+
 ## Check it, every time
 
 Always look at your data straight after importing it.
@@ -86,6 +97,7 @@ One value is `19O,5`: a letter O instead of a zero. The best fix is to correct i
 - `head()`, `str()`, `summary()`: check a data frame.
 - `$`: pick out one column, for example `morph$Height`.
 - `table()`: count the values in a column.
+- **Import Dataset > From Text (base)**: RStudio's menu that writes the import code for you.
 
 ## Your turn
 
