@@ -7,6 +7,8 @@ Coming soon.
 
 **In this chapter:** make a new column, pick out some rows, and summarise by group.
 
+Data rarely arrive in exactly the form you need. These few tools cover most simple jobs.
+
 ```{r}
 morph <- read.csv("data/morphometry.csv")
 ```
@@ -32,6 +34,8 @@ females <- subset(morph, Sex == "Female")
 nrow(females)
 ```
 
+`nrow()` counts the rows. Text values such as `"Female"` need quotes; numbers do not. A single `=` instead of `==` gives an error, and is one of the most common mistakes.
+
 Other conditions: `>`, `<`, `>=`, `<=` and `!=` (is not equal to).
 
 ```{r}
@@ -55,7 +59,14 @@ tapply(morph$Height, morph$Sex, mean)
 tapply(morph$Height, morph$Sex, sd)
 ```
 
-Read it as: take `Height`, split it by `Sex`, and give the `mean` of each part.
+Read it as: take `Height`, split it by `Sex`, and give the `mean` of each part. The result is one number per group, labelled with the group name.
+
+## Functions in this chapter
+
+- `subset()`: keep the rows that meet a condition.
+- `nrow()`: count rows.
+- `mean()`, `sd()`: mean and standard deviation.
+- `tapply()`: apply a function separately to each group.
 
 ## Your turn
 

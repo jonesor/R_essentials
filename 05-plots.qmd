@@ -21,6 +21,8 @@ Plot your data before you analyse it. Plots show patterns, and mistakes, that nu
 hist(morph$Height, xlab = "Height (cm)", main = "")
 ```
 
+Each bar shows how many people fall in a range of heights. Look at the shape: is it roughly symmetric, or are there two peaks?
+
 `xlab` sets the axis label. `main = ""` removes the title, which a figure caption usually replaces.
 
 ## A number by group: box plot
@@ -38,11 +40,20 @@ plot(Height ~ HandLength, data = morph,
      xlab = "Hand length (cm)", ylab = "Height (cm)")
 ```
 
+Each point is one person. Look at the direction and strength of the pattern, and for points far from the rest.
+
 The same `y ~ x` formula appears again in the next two chapters. Learn it once and it carries through.
 
 ## Save a plot
 
 In the Plots pane: Export > Save as Image.
+
+## Functions in this chapter
+
+- `hist()`: histogram of one number.
+- `boxplot(y ~ group)`: a number by group.
+- `plot(y ~ x)`: scatter plot of two numbers.
+- `xlab`, `ylab`, `main`: axis labels and title.
 
 ## Your turn
 

@@ -7,6 +7,8 @@ Coming soon.
 
 **In this chapter:** scripts, comments, objects, functions and vectors.
 
+These are the building blocks for everything else in the book.
+
 ## Use a script
 
 Code typed in the Console is gone when you close RStudio. Code in a script is saved.
@@ -21,6 +23,8 @@ Anything after `#` is ignored by R. Use comments to say what your code does.
 # R can be used as a calculator
 2 + 3
 ```
+
+The `[1]` in front of the answer just means "first value". It is not part of the result.
 
 ## Objects
 
@@ -63,6 +67,23 @@ Most functions work on the whole vector at once:
 ```{r}
 heights / 100
 ```
+
+::: {.callout-tip}
+## When it goes wrong
+
+- **The Console shows `+` instead of `>`:** R is waiting for you to finish the line, usually because of a missing bracket or quote. Press **Esc** and try again.
+- **`object 'Height' not found`:** check the spelling and the capitals, and that you have run the line that creates the object.
+- **`unexpected symbol`:** usually a missing comma or bracket.
+- **`could not find function`:** the function name is misspelt.
+:::
+
+## Functions in this chapter
+
+- `<-`: store a value in an object.
+- `c()`: combine values into a vector.
+- `mean()`, `min()`, `max()`, `length()`: summarise a vector.
+- `round()`: round a number.
+- `?`: open a help page, for example `?round`.
 
 ## Your turn
 

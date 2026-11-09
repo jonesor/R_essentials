@@ -7,6 +7,8 @@ Coming soon.
 
 **In this chapter:** install R and RStudio, make a project folder, and see where R looks for files.
 
+You only do this once. A tidy setup now saves a lot of frustration later.
+
 ## Install R and RStudio
 
 R is the language. RStudio is the program you use to write and run R.
@@ -35,6 +37,12 @@ getwd()
 ```
 
 You should see the path to your `R_essentials` folder. A file in its `data` folder is then simply `"data/morphometry.csv"`.
+
+If `getwd()` shows a different folder, you probably opened RStudio on its own rather than the project. Close RStudio and double-click `R_essentials.Rproj`.
+
+## Functions in this chapter
+
+- `getwd()`: show the folder R is working in.
 
 ## Your turn
 

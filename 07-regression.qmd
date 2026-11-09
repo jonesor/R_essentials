@@ -7,6 +7,8 @@ Coming soon.
 
 **In this chapter:** fit a straight line and understand its intercept and slope.
 
+Regression describes how one number changes with another, using a straight line. Put the variable you think does the explaining on the x-axis.
+
 ```{r}
 morph <- read.csv("data/morphometry.csv")
 morph$Height <- morph$Height / 10
@@ -31,7 +33,7 @@ mod <- lm(Height ~ HandLength, data = morph)
 coef(mod)
 ```
 
-These two numbers describe the line:
+`coef()` gives two numbers: `(Intercept)` and `HandLength`, which is the slope. Together they describe the line:
 
 **Height = 45.1 + 6.13 × Hand length**
 
@@ -65,7 +67,14 @@ abline(mod)
 confint(mod)
 ```
 
-The `HandLength` row gives the 95% confidence interval for the slope: 5.5 to 6.7 cm of height per cm of hand length. This is a plausible range for the true slope.
+The `HandLength` row gives the 95% confidence interval for the slope: 5.5 to 6.7 cm of height per cm of hand length. This is a plausible range for the true slope. The `(Intercept)` row can be ignored here.
+
+## Functions in this chapter
+
+- `lm(y ~ x)`: fit a straight line.
+- `coef()`: the intercept and slope.
+- `abline()`: add the line to a plot.
+- `confint()`: 95% confidence intervals.
 
 ## Your turn
 

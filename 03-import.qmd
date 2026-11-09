@@ -7,6 +7,8 @@ Coming soon.
 
 **In this chapter:** read a CSV file into R, check it, and fix the most common import problems.
 
+Most problems in an analysis start at import. A few minutes checking here saves hours later.
+
 ## Read the file
 
 Data for R are best kept as **CSV** files (comma-separated values). In Excel: File > Save As > CSV.
@@ -26,6 +28,8 @@ head(morph)
 str(morph)
 summary(morph)
 ```
+
+`head()` shows the first six rows. `summary()` gives the minimum, maximum and mean of each number column, which is a quick way to spot impossible values.
 
 `str()` is the most useful. It shows the number of rows, the column names, and each column's type: `chr` for text, `int` or `num` for numbers. Ask yourself: is each column the type I expect?
 
@@ -59,6 +63,8 @@ str(chol)
 table(chol$Treatment)
 ```
 
+`table()` counts how many times each value appears.
+
 Two more problems. `Cholesterol` is text (`chr`), not a number, and there are two kinds of "Drug". Fix the spaces first:
 
 ```{r}
@@ -73,6 +79,13 @@ chol$Cholesterol
 ```
 
 One value is `19O,5`: a letter O instead of a zero. The best fix is to correct it in the file itself, so the error is gone for good.
+
+## Functions in this chapter
+
+- `read.csv()`, `read.csv2()`: import a CSV file (comma or semicolon separated).
+- `head()`, `str()`, `summary()`: check a data frame.
+- `$`: pick out one column, for example `morph$Height`.
+- `table()`: count the values in a column.
 
 ## Your turn
 

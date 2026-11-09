@@ -10,7 +10,9 @@ Use it as a first introduction or as a refresher. There are seven chapters, each
 
 Type the code yourself rather than copying it. Making (and fixing) your own typing mistakes is part of learning R.
 
-Each chapter ends with a short **Your turn** exercise.
+In the code boxes, lines starting with `#>` show what R prints back. Do not type those.
+
+Each chapter ends with a list of the functions it used and a short **Your turn** exercise.
 
 ## The data
 
