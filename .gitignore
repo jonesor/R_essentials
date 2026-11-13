@@ -9,3 +9,5 @@ _book/
 /.quarto/
 
 **/*.quarto_ipynb
+
+_to_delete/

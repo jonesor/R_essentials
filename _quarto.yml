@@ -30,6 +30,8 @@ book:
     - 05-plots.qmd
     - 06-ttest.qmd
     - 07-regression.qmd
+  appendices:
+    - glossary.qmd
 
 format:
   html:
@@ -49,3 +51,6 @@ knitr:
     comment: "#>"
     fig.width: 5
     fig.height: 4
+
+crossref:
+  appendix-delim: ":"

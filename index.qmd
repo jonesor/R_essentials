@@ -14,6 +14,8 @@ In the code boxes, lines starting with `#>` show what R prints back. Do not type
 
 Each chapter ends with a list of the functions it used and a short **Your turn** exercise.
 
+Statistical terms such as *standard error* and *p-value* are explained in the [Glossary](glossary.qmd) at the end.
+
 ## The data
 
 Download these files and put them in a folder called `data` (Chapter 1 explains where):

@@ -1,0 +1,62 @@
+# Glossary
+
+The statistical terms used in this book, grouped by topic. Each has a short definition and, where it appears, where you meet it in R's output.
+
+## Describing data
+
+**Mean**
+: The average: add up the values and divide by how many there are. In R: `mean()`. The mean height in the morphometry data is 167.7 cm (Chapter 4).
+
+**Median**
+: The middle value when the data are sorted: half the values are above it and half below. It is the thick line in a box plot (Chapter 5).
+
+**Standard deviation (SD)**
+: How spread out the data are; roughly the typical distance of a value from the mean. In R: `sd()`. The SD of height is 9.16 cm (Chapter 4).
+
+## From sample to population
+
+**Population and sample**
+: The population is everything you want to know about, for example all students. The sample is the part you actually measured, here 155 students. Statistics uses the sample to learn about the population.
+
+**Estimate**
+: A number calculated from the sample to describe the population, for example a difference in means (15.1 cm) or a slope (6.13). A different sample would give a slightly different estimate. In `t.test()` output: "sample estimates". In `lm()`: `coef()`.
+
+**Standard error (SE)**
+: How much an estimate would vary if you repeated the study with a new sample. A small SE means a precise estimate. The SE gets smaller as the sample gets larger. The output in this book does not print it, but the confidence interval is built from it.
+
+::: {.callout-tip}
+## Standard deviation or standard error?
+
+The **SD** describes the spread of the **data**. The **SE** describes the uncertainty in an **estimate**. Collecting more data hardly changes the SD, but it makes the SE smaller.
+:::
+
+**95% confidence interval (CI)**
+: A range of plausible values for the true value in the population, roughly the estimate plus or minus two standard errors. More formally: if you repeated the study many times, 95% of the intervals made this way would contain the true value. In `t.test()` output: "95 percent confidence interval". For a regression: `confint()`.
+
+## Models
+
+**Response and explanatory variable**
+: In the formula `y ~ x`, `y` is the response (what you measured and want to explain) and `x` is the explanatory variable. In `Height ~ Sex`, height is the response and sex is the explanatory variable.
+
+**Intercept**
+: In a straight line, the predicted value of `y` when `x` is zero. Shown as `(Intercept)` by `coef()`. It is often outside the data and then has no real meaning (Chapter 7).
+
+**Slope**
+: How much `y` changes, on average, when `x` increases by one unit. For height and hand length it is 6.13 cm of height per cm of hand length (Chapter 7).
+
+## Tests
+
+**Null hypothesis**
+: The assumption that there is no effect: for example, that two group means are equal, or that a slope is zero. A test asks how well the data fit this assumption.
+
+**Test statistic (t)**
+: The estimate divided by its standard error: how many standard errors the estimate is from zero. The further from zero, the harder the data are to explain without an effect. In `t.test()` output: `t`.
+
+**Degrees of freedom (df)**
+: A number linked to the sample size, which R uses to turn `t` into a p-value. You report it, but rarely need to interpret it. The Welch t-test can give a df that is not a whole number, such as 152.8.
+
+**p-value**
+: The probability of seeing a result at least this extreme if the null hypothesis were true. A small p-value means the data would be surprising if there were no effect. It is **not** the probability that the null hypothesis is true, and it says nothing about how big the effect is.
+
+**Statistically significant**
+: Usually means p < 0.05. It does not mean large or important. Always report the estimate and its confidence interval first. In the cholesterol example (Chapter 6 exercise), p = 0.068 is "not significant", yet the estimate is a reduction of 20.2 with a 95% CI of -1.8 to 42.2: the data fit no effect, but also a sizeable one.
