@@ -52,6 +52,8 @@ mean(morph$Height)
 sd(morph$Height)
 ```
 
+The standard deviation (SD) measures how spread out the data are. See the [Glossary](glossary.qmd#describing-data).
+
 ## Summarise by group
 
 `tapply()` applies a function to a column, separately for each group:

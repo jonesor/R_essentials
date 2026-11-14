@@ -42,6 +42,8 @@ Read the output from the bottom up. Start with the size of the difference, not t
 - **95 percent confidence interval:** -16.7 to -13.4. R gives the difference as female minus male, hence the minus signs. A plausible range for the true difference is 13.4 to 16.7 cm.
 - **t, df and p-value** (top line): `t` is the difference measured against the variation in the data, and `df` (degrees of freedom) reflects the sample size. The p-value is the probability of seeing a difference at least this large if the true means were equal. That assumption of no difference is called the **null hypothesis**. R prints `p-value < 2.2e-16`, which is R's way of saying "extremely small". Report it as p < 0.001.
 
+Confidence interval, standard error, p-value and the other terms here are explained in the [Glossary](glossary.qmd#from-sample-to-population).
+
 Write it up with the estimate first:
 
 > Males were on average 15.1 cm taller than females (95% CI 13.4 to 16.7 cm; Welch t-test, t = 18.2, d.f. = 152.8, p < 0.001).

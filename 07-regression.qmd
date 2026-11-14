@@ -47,6 +47,8 @@ The slope is **6.13**: for every extra centimetre of hand length, height is on a
 
 The intercept is **45.1**: the predicted height when hand length is 0 cm. No one has a hand of 0 cm, so the intercept here is just where the line crosses the y-axis. It is needed to draw the line, but has no biological meaning in this case.
 
+Slope, intercept and the other terms in this chapter are defined in the [Glossary](glossary.qmd#models).
+
 ## Use the line
 
 Predict the height of someone with a 20 cm hand:
