@@ -65,6 +65,75 @@ tapply(morph$Height, morph$Sex, sd)
 
 Read it as: take `Height`, split it by `Sex`, and give the `mean` of each part. The result is one number per group, labelled with the group name.
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** In subset(morph, Sex == "Female"), why ==?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "== asks \"is equal to?\"; a single = gives an error here",
+  "There is no difference between = and ==",
+  "= is for numbers and == is for text",
+  "== is faster than ="
+)))
+```
+
+**2.** You accidentally run morph$Height <- morph$Height / 10 twice. What happens?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "R ignores the second run",
+  "R gives an error",
+  "The heights go back to millimetres",
+  answer = "The heights are divided by 100, so they are now wrong"
+)))
+```
+
+**3.** What does tapply(morph$Height, morph$Sex, mean) give?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The mean height of everyone",
+  answer = "The mean height of each sex",
+  "The mean of the Sex column",
+  "The number of people of each sex"
+)))
+```
+
+**4.** The SD of height is 9.16 cm overall, but about 5 cm within each sex. Why?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "A mistake in the calculation",
+  "Smaller groups always have a smaller SD",
+  answer = "The overall SD also includes the difference between the sexes",
+  "sd() only works properly on one group"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. == compares; = is used to set an argument, so subset() gets confused.
+2. Each run divides by 10 again. Rerun from the import line to start afresh.
+3. tapply() splits Height by Sex and applies mean() to each part.
+4. Males are about 15 cm taller than females, which adds to the overall spread.
+:::
+
 ## Functions in this chapter
 
 - `subset()`: keep the rows that meet a condition.

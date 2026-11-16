@@ -73,6 +73,75 @@ confint(mod)
 
 The `HandLength` row gives the 95% confidence interval for the slope: 5.5 to 6.7 cm of height per cm of hand length. This is a plausible range for the true slope. The `(Intercept)` row can be ignored here.
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** Height = 45.1 + 6.13 × hand length. What does 6.13 mean?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The average height is 6.13 cm",
+  answer = "For each extra cm of hand length, height is on average 6.13 cm greater",
+  "Hand length explains 6.13% of height",
+  "Height is 6.13 times hand length"
+)))
+```
+
+**2.** Why does the intercept (45.1 cm) have no biological meaning here?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Intercepts never mean anything",
+  "The model is wrong",
+  "It is the mean height",
+  answer = "It is the predicted height for a hand length of 0 cm, far outside the data"
+)))
+```
+
+**3.** confint() gives 5.5 to 6.7 for the slope. What does this mean?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "It is a plausible range for the true slope",
+  "95% of people have a slope in this range",
+  "Hand lengths range from 5.5 to 6.7 cm",
+  "The slope is wrong 5% of the time"
+)))
+```
+
+**4.** Running abline(mod) gives the error plot.new has not been called yet. Why?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The model is wrong",
+  "abline() needs a package",
+  answer = "abline() adds a line to an existing plot, and there is no plot yet",
+  "The data were not imported"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. The slope is the change in y for a one-unit increase in x.
+2. No one has a hand length of 0 cm. The intercept is needed to draw the line, but here it means nothing biologically.
+3. Like any confidence interval, it gives a range of plausible values for the population.
+4. Make the plot first with plot(), then add the line.
+:::
+
 ## Functions in this chapter
 
 - `lm(y ~ x)`: fit a straight line.

@@ -74,8 +74,8 @@ cat(webexercises::longmcq(c(
 #| results: asis
 cat(webexercises::longmcq(c(
   "There is less than a 0.1% chance that males and females have the same mean height",
-  answer = "If the true means were equal, a difference this large would be very unlikely",
   "The difference in height is large",
+  answer = "If the true means were equal, a difference this large would be very unlikely",
   "The result is 99.9% certain to be correct"
 )))
 ```
@@ -99,10 +99,10 @@ cat(webexercises::longmcq(c(
 #| echo: false
 #| results: asis
 cat(webexercises::longmcq(c(
-  answer = "It does not assume that the two groups have the same spread",
   "It is more likely to give a small p-value",
   "It only works with small samples",
-  "It does not need a formula"
+  "It does not need a formula",
+  answer = "It does not assume that the two groups have the same spread"
 )))
 ```
 

@@ -50,6 +50,75 @@ The same `y ~ x` formula appears again in the next two chapters. Learn it once a
 
 In the Plots pane: Export > Save as Image.
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** In a box plot, what does the thick line inside the box show?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The mean",
+  "The standard deviation",
+  answer = "The median",
+  "The largest value"
+)))
+```
+
+**2.** What does the ~ mean in boxplot(Height ~ Sex)?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "\"Explained by\": height explained by sex",
+  "\"Approximately\"",
+  "Height minus sex",
+  "Plot sex on the y-axis"
+)))
+```
+
+**3.** In plot(Height ~ HandLength), where does hand length go?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "On the y-axis",
+  answer = "On the x-axis",
+  "On both axes",
+  "Nowhere; it sets the colour"
+)))
+```
+
+**4.** Why should you plot your data before analysing it?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "R needs a plot before it can run a test",
+  "Plots make p-values smaller",
+  "It saves typing later",
+  answer = "Plots show patterns, and mistakes, that numbers can hide"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. The box holds the middle half of the data, and the thick line is the median.
+2. The formula y ~ x reads "y explained by x". It is used again in t.test() and lm().
+3. In y ~ x, the variable after the ~ goes on the x-axis.
+4. A plot shows the shape of the data, odd values and the rough size of an effect before any test.
+:::
+
 ## Functions in this chapter
 
 - `hist()`: histogram of one number.

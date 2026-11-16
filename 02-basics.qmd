@@ -79,6 +79,75 @@ heights / 100
 - **`could not find function`:** the function name is misspelt.
 :::
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** What does the [1] in front of an answer mean?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The answer is 1",
+  "There was one error",
+  answer = "It marks the first value of the output",
+  "It is the line number in your script"
+)))
+```
+
+**2.** You made an object called height, then type Height. What happens?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "R gives an error: object 'Height' not found",
+  "R uses height instead",
+  "R creates a new object called Height",
+  "Nothing; R ignores capitals"
+)))
+```
+
+**3.** The Console shows + instead of >. What should you do?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Wait for R to finish",
+  "Restart RStudio",
+  "Press Enter several times",
+  answer = "Press Esc, then look for a missing bracket or quote"
+)))
+```
+
+**4.** heights <- c(165, 172, 180, 158). What does heights / 100 give?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The total of the heights divided by 100",
+  answer = "Each height divided by 100",
+  "An error, because you cannot divide a vector",
+  "Only the first height divided by 100"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. R numbers the values it prints. With one value, the [1] simply marks the first one.
+2. Names are case-sensitive, so Height and height are different objects.
+3. The + means R is waiting for you to finish the line. Esc cancels it.
+4. Most functions and operators work on every value in a vector at once.
+:::
+
 ## Functions in this chapter
 
 - `<-`: store a value in an object.

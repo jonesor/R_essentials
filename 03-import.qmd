@@ -93,6 +93,75 @@ chol$Cholesterol
 
 One value is `19O,5`: a letter O instead of a zero. The best fix is to correct it in the file itself, so the error is gone for good.
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** Why should you check your data straight after importing it?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "R will not run any analysis until you do",
+  answer = "To catch problems, such as a wrong column type, before they spoil the analysis",
+  "It saves the data",
+  "It makes the import faster"
+)))
+```
+
+**2.** str() shows a column of numbers as chr. What does that suggest?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "The column is fine",
+  "The file is too large",
+  answer = "Somewhere in the column there is a value that is not a valid number",
+  "R could not find the file"
+)))
+```
+
+**3.** read.csv() gives the error duplicate 'row.names' are not allowed. What is the likely cause?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "The file uses semicolons between values",
+  "The file is missing",
+  "The file is too big",
+  "A column name is misspelt"
+)))
+```
+
+**4.** After using Import Dataset > From Text (base), what should you do?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Nothing; the import is saved automatically",
+  "Save the workspace",
+  "Use From Text (readr) next time instead",
+  answer = "Copy the read.csv line into your script and shorten the path to \"data/...\""
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. Problems at import, such as text where numbers should be, cause confusing errors later. str() catches them early.
+2. One typo or decimal comma turns the whole column into text.
+3. Danish or German Excel saves CSV files with semicolons. Use read.csv2().
+4. The menu runs the code only in the Console. Put it in your script so it runs again next time, with a short path that still works if the folder moves.
+:::
+
 ## Functions in this chapter
 
 - `read.csv()`, `read.csv2()`: import a CSV file (comma or semicolon separated).

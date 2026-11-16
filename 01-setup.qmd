@@ -42,6 +42,75 @@ You should see the path to your `R_practice` folder. A file in its `data` folder
 
 If `getwd()` shows a different folder, you probably opened RStudio on its own rather than the project. Close RStudio and double-click `R_practice.Rproj`.
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** Why use an RStudio Project?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "It makes R run faster",
+  "It installs packages automatically",
+  answer = "R looks for files in the project folder, which avoids most \"file not found\" errors",
+  "It backs up your work to the cloud"
+)))
+```
+
+**2.** You run getwd() and the path does not end in R_practice. What is the most likely reason?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "R is not installed correctly",
+  "The data folder is missing",
+  "You need to restart your computer",
+  answer = "You opened RStudio on its own instead of the project file"
+)))
+```
+
+**3.** What is the difference between R and RStudio?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "R is the language; RStudio is the program you use to write and run it",
+  "They are the same thing",
+  "RStudio is the language; R is the program you use to run it",
+  "R is for statistics and RStudio is for plots"
+)))
+```
+
+**4.** With your project open, how do you refer to morphometry.csv in the data folder?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "\"morphometry\"",
+  answer = "\"data/morphometry.csv\"",
+  "\"R_practice/morphometry.csv\"",
+  "The full path, starting from your home folder"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. A project sets R's working directory to the project folder, so short paths like "data/morphometry.csv" work.
+2. Opening RStudio on its own starts in your home folder. Double-click R_practice.Rproj instead.
+3. R does the work. RStudio is the window around it where you write scripts, see plots and manage files.
+4. Paths are relative to the project folder, so the data folder and the file name are enough.
+:::
+
 ## Functions in this chapter
 
 - `getwd()`: show the folder R is working in.
