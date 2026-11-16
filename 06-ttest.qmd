@@ -48,6 +48,75 @@ Write it up with the estimate first:
 
 > Males were on average 15.1 cm taller than females (95% CI 13.4 to 16.7 cm; Welch t-test, t = 18.2, d.f. = 152.8, p < 0.001).
 
+## Check your understanding
+
+Choose an answer for each question, then click **Check answers**.
+
+::: {.webex-check .webex-box}
+
+**1.** The 95% confidence interval for the difference in height is -16.7 to -13.4. Why are the numbers negative?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Females are taller than males",
+  answer = "R gives the difference as female minus male, and females are shorter",
+  "The test did not work",
+  "The heights were not converted to cm"
+)))
+```
+
+**2.** The p-value is below 0.001. What does this tell you?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "There is less than a 0.1% chance that males and females have the same mean height",
+  answer = "If the true means were equal, a difference this large would be very unlikely",
+  "The difference in height is large",
+  "The result is 99.9% certain to be correct"
+)))
+```
+
+**3.** What should you report first when you write up the result?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "The estimated difference and its confidence interval",
+  "The p-value",
+  "The t value",
+  "The degrees of freedom"
+)))
+```
+
+**4.** Why does R use the Welch t-test by default?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "It does not assume that the two groups have the same spread",
+  "It is more likely to give a small p-value",
+  "It only works with small samples",
+  "It does not need a formula"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. R subtracts the second group from the first, in alphabetical order: female minus male. Females are shorter, so the difference is negative. The size, 13.4 to 16.7 cm, is what matters.
+2. The p-value assumes there is no difference and asks how surprising the data would be. It is not the probability that the null hypothesis is true, and it says nothing about how big the difference is.
+3. The estimate and its confidence interval tell the reader how big the effect is and how sure we are. The p-value comes last.
+4. The ordinary t-test assumes equal spread in both groups. Welch does not, so it is safe whether or not the spreads differ.
+:::
+
 ## Functions in this chapter
 
 - `boxplot(y ~ group)`: plot a numeric variable by group.

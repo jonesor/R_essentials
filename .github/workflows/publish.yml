@@ -29,6 +29,7 @@ jobs:
           packages: |
             any::knitr
             any::rmarkdown
+            any::webexercises
 
       - uses: quarto-dev/quarto-actions/setup@v2
 

@@ -20,3 +20,11 @@ $callout-color-tip: #85B7EB;
   margin: 1rem 0 1.5rem;
 }
 .chapter-intro p { margin: 0; }
+
+.webex-select, input.webex-solveme,
+.unchecked .webex-incorrect, .unchecked .webex-correct,
+.unchecked .webex-radiogroup label.webex-incorrect,
+.unchecked .webex-radiogroup label.webex-correct {
+  background-color: transparent !important;
+  color: inherit !important;
+}

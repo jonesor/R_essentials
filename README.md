@@ -24,6 +24,6 @@ One video per chapter, 5 to 8 minutes, following the chapter text and typing the
 
 ## Rules for writing
 
-- Base R only. No packages, no pipe.
+- Base R only. No packages, no pipe. (The build uses the `webexercises` package for the self-test quizzes; students never see or install it.)
 - Minimal: if a topic is not needed for the t-test or the regression, leave it out.
 - Every chapter: one short "Your turn" exercise.
