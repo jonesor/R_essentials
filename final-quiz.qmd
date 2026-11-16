@@ -1,0 +1,152 @@
+# Final quiz {.unnumbered}
+
+Ten questions covering the whole book. Answer them all, then click **Check answers**. The explanations say which chapter to revisit if you get one wrong.
+
+::: {.webex-check .webex-box}
+
+**1.** You want the mean height of females only. Which code works?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "`mean(morph$Height, Sex == \"Female\")`",
+  answer = "`females <- subset(morph, Sex == \"Female\")`, then `mean(females$Height)`",
+  "`females <- subset(morph, Sex = \"Female\")`, then `mean(females$Height)`",
+  "`subset(mean(morph$Height), Sex == \"Female\")`"
+)))
+```
+
+**2.** Which plot is best for comparing height between males and females?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "`hist(morph$Height)`",
+  "`plot(Height ~ HandLength, data = morph)`",
+  answer = "`boxplot(Height ~ Sex, data = morph)`",
+  "A plot is not needed before a t-test"
+)))
+```
+
+**3.** A study finds a difference of 2 cm (95% CI -1 to 5 cm, p = 0.21). What is the best conclusion?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "There is no difference",
+  "The difference is exactly 2 cm",
+  "The study shows a large effect",
+  answer = "The data fit anything from a 1 cm decrease to a 5 cm increase, so we cannot tell"
+)))
+```
+
+**4.** Which describes the uncertainty in an estimate, rather than the spread of the data?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "The standard error",
+  "The standard deviation",
+  "The median",
+  "The range"
+)))
+```
+
+**5.** In `lm(Height ~ HandLength, data = morph)`, which is the response variable?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "HandLength",
+  answer = "Height",
+  "Both",
+  "Neither"
+)))
+```
+
+**6.** A cricket model gives temperature = 22.8 + 3.41 × chirps (°F). What is the predicted temperature at 10 chirps per second?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "22.8 \u00b0F",
+  "34.1 \u00b0F",
+  answer = "56.9 \u00b0F",
+  "260 \u00b0F"
+)))
+```
+
+**7.** If you collected a much larger sample, what would most likely happen?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  answer = "The confidence intervals would get narrower",
+  "The standard deviation would get much smaller",
+  "The slope would get bigger",
+  "The p-value would get bigger"
+)))
+```
+
+**8.** You get the error `cannot open file 'data/morphometry.csv': No such file or directory`. What should you check first?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Reinstall R",
+  "Switch to read.csv2()",
+  "Restart your computer",
+  answer = "That the project is open and the file is in the data folder with exactly that name"
+)))
+```
+
+**9.** Which is the best write-up of the height result?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Males were significantly taller than females (p < 0.001)",
+  answer = "Males were on average 15.1 cm taller than females (95% CI 13.4 to 16.7 cm; p < 0.001)",
+  "p < 0.001, so males are taller",
+  "There was a significant difference in height between the sexes"
+)))
+```
+
+**10.** Why write your code in a script rather than typing it in the Console?
+
+```{r}
+#| echo: false
+#| results: asis
+cat(webexercises::longmcq(c(
+  "Scripts run faster",
+  "The Console cannot do statistics",
+  "Plots only work from a script",
+  answer = "You can run the whole analysis again later and see exactly what you did"
+)))
+```
+
+:::
+
+::: {.callout-tip collapse="true"}
+## Why? Answers explained
+
+1. == compares; a single = gives an error. subset() keeps the rows, then mean() works on one column. (Chapter 4)
+2. A box plot shows a number by group. A histogram has no groups; a scatter plot needs two numbers. (Chapter 5)
+3. The confidence interval includes zero but also sizeable effects. A large p-value does not show there is no difference. (Chapter 6 and the Glossary)
+4. The SD describes the data; the SE describes how much an estimate would vary between samples. (Glossary)
+5. In y ~ x, y is the response. Here height is explained by hand length. (Chapter 7 and the Glossary)
+6. 22.8 + 3.41 × 10 = 22.8 + 34.1 = 56.9. (Chapter 7)
+7. More data makes estimates more precise, so the standard error and the confidence interval shrink. The SD of the data stays about the same. (Glossary)
+8. This error almost always means R is looking in the wrong folder or the file name is misspelt. (Chapters 1 and 3)
+9. Give the size of the effect and its confidence interval first. "Significant" alone says nothing about how big the difference is. (Chapter 6)
+10. A script is a saved record of your analysis. Code typed in the Console is gone when you close RStudio. (Chapter 2)
+:::

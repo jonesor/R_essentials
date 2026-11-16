@@ -147,7 +147,7 @@ cat(webexercises::longmcq(c(
   "Nothing; the import is saved automatically",
   "Save the workspace",
   "Use From Text (readr) next time instead",
-  answer = "Copy the read.csv line into your script and shorten the path to \"data/...\""
+  answer = "Copy the read.csv line into your script and shorten the path to `\"data/...\"`"
 )))
 ```
 

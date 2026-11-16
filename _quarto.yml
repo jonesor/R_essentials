@@ -30,6 +30,7 @@ book:
     - 05-plots.qmd
     - 06-ttest.qmd
     - 07-regression.qmd
+    - final-quiz.qmd
   appendices:
     - glossary.qmd
 

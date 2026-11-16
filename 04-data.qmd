@@ -84,7 +84,7 @@ cat(webexercises::longmcq(c(
 )))
 ```
 
-**2.** You accidentally run morph$Height <- morph$Height / 10 twice. What happens?
+**2.** You accidentally run `morph$Height <- morph$Height / 10` twice. What happens?
 
 ```{r}
 #| echo: false
@@ -97,7 +97,7 @@ cat(webexercises::longmcq(c(
 )))
 ```
 
-**3.** What does tapply(morph$Height, morph$Sex, mean) give?
+**3.** What does `tapply(morph$Height, morph$Sex, mean)` give?
 
 ```{r}
 #| echo: false

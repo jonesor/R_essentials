@@ -93,9 +93,9 @@ cat(webexercises::longmcq(c(
 #| echo: false
 #| results: asis
 cat(webexercises::longmcq(c(
-  "\"morphometry\"",
-  answer = "\"data/morphometry.csv\"",
-  "\"R_practice/morphometry.csv\"",
+  "`\"morphometry\"`",
+  answer = "`\"data/morphometry.csv\"`",
+  "`\"R_practice/morphometry.csv\"`",
   "The full path, starting from your home folder"
 )))
 ```
